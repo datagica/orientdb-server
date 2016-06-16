@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const OrientDB = require('@datagica/orientdb-server');
+const orientdb = new OrientDB({
+  debug: true
+});
+orientdb.start(function() => {
+  server.log('orientdb is now running');
+}).catch(function(err) => {
+  console.error("orientdb couldn't be started: "+err);
+});
+```

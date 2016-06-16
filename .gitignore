@@ -1,0 +1,8 @@
+*.pid
+tmp-test
+node_modules/
+npm-debug.log
+.*
+orientdb/databases/*
+orientdb/log/*
+!orientdb/log/readme.txt
