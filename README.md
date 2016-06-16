@@ -11,7 +11,7 @@ Version of OrientDB used: OrientDB Server v2.2.2 (community edition)
 
 ### Installation
 
-    $ npm install orientdb-server --save
+    $ npm i --save git@github.com:datagica/orientdb-server.git
 
 ### Quickstart
 
