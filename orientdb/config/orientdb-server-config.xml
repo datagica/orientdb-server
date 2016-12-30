@@ -82,8 +82,6 @@
   <storages>
     </storages>
   <users>
-    <user name="guest" password="guest" resources="connect,server.listDatabases,server.dblist"/>
-    <user name="root" password="termidor406" resources="*"/>
   </users>
   <properties>
     <entry name="db.pool.min" value="1"/>
