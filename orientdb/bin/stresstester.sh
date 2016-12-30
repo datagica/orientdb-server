@@ -17,7 +17,7 @@ done
 PRGDIR=`dirname "$PRG"`
 
 # Only set ORIENTDB_HOME if not already set
-[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-2.2.2.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
+[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-2.2.14.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
 export ORIENTDB_HOME
 
 
@@ -29,5 +29,5 @@ else
 fi
 export JAVA
 
-exec "$JAVA" -cp "$ORIENTDB_HOME/lib/*" \
+exec "$JAVA" -XX:MaxDirectMemorySize=512g -cp "$ORIENTDB_HOME/lib/*" \
     com.orientechnologies.orient.stresstest.OStressTester $*

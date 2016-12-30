@@ -1,6 +1,6 @@
 @echo off
 rem
-rem Copyright (c) Orient Technologies LTD (http://www.orientechnologies.com)
+rem Copyright (c) OrientDB LTD (http://www.orientdb.com)
 rem
 
 echo            .                                          
@@ -85,10 +85,10 @@ rem -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044
 rem AND ATTACH TO THE CURRENT HOST, PORT 1044
 
 rem ORIENTDB MAXIMUM HEAP. USE SYNTAX -Xmx<memory>, WHERE <memory> HAS THE TOTAL MEMORY AND SIZE UNIT. EXAMPLE: -Xmx512m
-set MAXHEAP=-Xmx512m
+set MAXHEAP=-Xmx2G
 rem ORIENTDB MAXIMUM DISKCACHE IN MB, EXAMPLE: "-Dstorage.diskCache.bufferSize=8192" FOR 8GB of DISKCACHE
 set MAXDISKCACHE=
 
-call %JAVA% -server %JAVA_OPTS% %MAXHEAP% %JAVA_OPTS_SCRIPT% %ORIENTDB_SETTINGS% %MAXDISKCACHE% -Djava.util.logging.config.file="%LOG_FILE%" -Dorientdb.config.file="%CONFIG_FILE%" -Dorientdb.www.path="%WWW_PATH%" -Dorientdb.build.number="develop@re6e0017eee1660146bbb27715832b82a268a438a; 2016-06-13 15:26:13+0000" -cp "%ORIENTDB_HOME%\lib\*;%ORIENTDB_HOME%\plugins\*" %CMD_LINE_ARGS% com.orientechnologies.orient.server.OServerMain
+call %JAVA% -server %JAVA_OPTS% %MAXHEAP% %JAVA_OPTS_SCRIPT% %ORIENTDB_SETTINGS% %MAXDISKCACHE% -Djava.util.logging.config.file="%LOG_FILE%" -Dorientdb.config.file="%CONFIG_FILE%" -Dorientdb.www.path="%WWW_PATH%" -Dorientdb.build.number="2.2.x@r483093384e4fdbe825e2de0950f007776ee27a84; 2016-12-22 14:57:07+0000" -cp "%ORIENTDB_HOME%\lib\*;%ORIENTDB_HOME%\plugins\*" %CMD_LINE_ARGS% com.orientechnologies.orient.server.OServerMain
 
 :end
