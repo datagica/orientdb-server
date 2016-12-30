@@ -88,6 +88,5 @@
     <entry name="db.pool.max" value="50"/>
     <entry name="profiler.enabled" value="true"/>
     <entry value="2147483647" name="ridBag.embeddedToSbtreeBonsaiThreshold"/>
-    <entry name="server.database.path" value="./tmp-test"/>
   </properties>
 </orient-server>
