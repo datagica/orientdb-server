@@ -5,7 +5,7 @@
 This package provides an embedded OrientDB server as a NPM dependency, together
 with a simple asynchronous api to start and stop the instance.
 
-Version of OrientDB used: OrientDB Server v2.2.2 (community edition)
+Version of OrientDB used: OrientDB Server v2.2.14 (community edition)
 
 ## Usage
 
