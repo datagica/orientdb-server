@@ -121,6 +121,6 @@ exec "$JAVA" $JAVA_OPTS \
     -Djava.util.logging.config.file="$ORIENTDB_LOG_CONF" \
     -Dorientdb.config.file="$CONFIG_FILE" \
     -Dorientdb.www.path="$ORIENTDB_WWW_PATH" \
-    -Dorientdb.build.number="2.2.x@r483093384e4fdbe825e2de0950f007776ee27a84; 2016-12-22 14:57:07+0000" \
-    -cp "$ORIENTDB_HOME/lib/orientdb-server-2.2.14.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
+    -Dorientdb.build.number="2.2.x@rd9bace82ea8437117fd48114fc255e791056014b; 2017-02-16 17:20:27+0000" \
+    -cp "$ORIENTDB_HOME/lib/orientdb-server-2.2.17.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
     $ARGS com.orientechnologies.orient.server.OServerMain

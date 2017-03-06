@@ -23,7 +23,7 @@ done
 PRGDIR=`dirname "$PRG"`
 
 # Only set ORIENTDB_HOME if not already set
-[ -f "$ORIENTDB_HOME"/lib/orientdb-etl-2.2.14.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
+[ -f "$ORIENTDB_HOME"/lib/orientdb-etl-2.2.17.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
 export ORIENTDB_HOME
 
 # Set JavaHome if it exists
@@ -42,4 +42,4 @@ TRUSTSTORE=$ORIENTDB_HOME/config/cert/orientdb-console.ts
 TRUSTSTORE_PASS=password
 SSL_OPTS="-Dclient.ssl.enabled=false -Djavax.net.ssl.keyStore=$KEYSTORE -Djavax.net.ssl.keyStorePassword=$KEYSTORE_PASS -Djavax.net.ssl.trustStore=$TRUSTSTORE -Djavax.net.ssl.trustStorePassword=$TRUSTSTORE_PASS"
 
-$JAVA -server $JAVA_OPTS $ORIENTDB_SETTINGS $SSL_OPTS -Dfile.encoding=utf-8 -Dorientdb.build.number="2.2.x@r483093384e4fdbe825e2de0950f007776ee27a84; 2016-12-22 14:57:07+0000" -cp "$ORIENTDB_HOME/lib/*" com.orientechnologies.orient.etl.OETLProcessor $*
+$JAVA -server $JAVA_OPTS $ORIENTDB_SETTINGS $SSL_OPTS -Dfile.encoding=utf-8 -Dorientdb.build.number="2.2.x@rd9bace82ea8437117fd48114fc255e791056014b; 2017-02-16 17:20:27+0000" -cp "$ORIENTDB_HOME/lib/*" com.orientechnologies.orient.etl.OETLProcessor $*

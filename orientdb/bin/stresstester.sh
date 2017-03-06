@@ -17,7 +17,7 @@ done
 PRGDIR=`dirname "$PRG"`
 
 # Only set ORIENTDB_HOME if not already set
-[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-2.2.14.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
+[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-2.2.17.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
 export ORIENTDB_HOME
 
 

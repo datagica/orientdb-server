@@ -67,7 +67,7 @@ if [ -f "$ORIENTDB_PID" ] && [ "${#PARAMS}" -eq 0 ] ; then
 else
     echo "pid file not present or params detected"
     "$JAVA" -client $JAVA_OPTS $ORIENTDB_SETTINGS -Dorientdb.config.file="$CONFIG_FILE" \
-        -cp "$ORIENTDB_HOME/lib/orientdb-tools-2.2.14.jar:$ORIENTDB_HOME/lib/*" \
+        -cp "$ORIENTDB_HOME/lib/orientdb-tools-2.2.17.jar:$ORIENTDB_HOME/lib/*" \
         com.orientechnologies.orient.server.OServerShutdownMain $*
     if [ "x$wait" = "xyes" ] ; then
       echo "wait for OrientDB server to shutdown"
