@@ -8,4 +8,3 @@ orientdb.start(function() => {
 }).catch(function(err) => {
   console.error("orientdb couldn't be started: "+err);
 });
-```
