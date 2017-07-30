@@ -5,13 +5,19 @@
 This package provides an embedded OrientDB server as a NPM dependency, together
 with a simple asynchronous api to start and stop the instance.
 
-Version of OrientDB used: OrientDB Server v2.2.14 (community edition)
+Version of OrientDB used: OrientDB Server v3.0.0m2 (community edition with support for TinkerPop 3)
+
+## Important
+
+The startup scripts have been modified to remove the -server flag and finally
+allow OrientDB to run on a standard JVM (JRE only) and not the server-mode JRE
+which requires the full JDK.
 
 ## Usage
 
 ### Installation
 
-    $ npm i --save git+ssh://git@github.com/datagica/orientdb-server.git 
+    $ npm i --save git+ssh://git@github.com/datagica/orientdb-server.git
 
 ### Quickstart
 
@@ -30,7 +36,7 @@ var orientdb = new OrientDB({
       password: "guest"
     },
     root: {
-      password: 'weakpassword',
+      password: 'termidor406', // this is our default password
       resources: '*'
     }
   }

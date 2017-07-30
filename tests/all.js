@@ -10,12 +10,13 @@ const OrientdbServer = require("../lib/orientdb-server");
 
 describe('@datagica/orientdb-server', function()  {
 
-    this.timeout(5000);
+    this.timeout(20000);
 
-    it('start and stop the server', done => {
+    it('start and stop the server', function (done) {
+
       const orientdb = new OrientdbServer({
-        debug: false,
-        pipe: false,
+        debug: true,
+        pipe: true,
         properties: {
           serverDatabasePath: './tmp-test'
         },

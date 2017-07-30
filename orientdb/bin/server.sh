@@ -56,12 +56,12 @@ fi
 
 # Raspberry Pi check (Java VM does not run with -server argument on ARMv6)
 if [ `uname -m` != "armv6l" ]; then
-  JAVA_OPTS="$JAVA_OPTS -server "
+  JAVA_OPTS="$JAVA_OPTS  "
 fi
 export JAVA_OPTS
 
 # Set JavaHome if it exists
-if [ -f "${JAVA_HOME}/bin/java" ]; then 
+if [ -f "${JAVA_HOME}/bin/java" ]; then
    JAVA=${JAVA_HOME}/bin/java
 else
    JAVA=java
@@ -77,7 +77,7 @@ if [ -z "$ORIENTDB_WWW_PATH" ] ; then
 fi
 
 if [ -z "$ORIENTDB_PID" ] ; then
-ORIENTDB_PID=$ORIENTDB_HOME/bin/orient.pid
+    ORIENTDB_PID=$ORIENTDB_HOME/bin/orient.pid
 fi
 
 if [ -f "$ORIENTDB_PID" ]; then
@@ -121,6 +121,6 @@ exec "$JAVA" $JAVA_OPTS \
     -Djava.util.logging.config.file="$ORIENTDB_LOG_CONF" \
     -Dorientdb.config.file="$CONFIG_FILE" \
     -Dorientdb.www.path="$ORIENTDB_WWW_PATH" \
-    -Dorientdb.build.number="2.2.x@rd9bace82ea8437117fd48114fc255e791056014b; 2017-02-16 17:20:27+0000" \
-    -cp "$ORIENTDB_HOME/lib/orientdb-server-2.2.17.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
+    -Dorientdb.build.number="develop@r31b455cec3cc97d11be0748e31ed1a03ff6a23ac; 2017-07-18 09:10:40+0000" \
+    -cp "$ORIENTDB_HOME/lib/orientdb-server-3.0.0m2.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
     $ARGS com.orientechnologies.orient.server.OServerMain

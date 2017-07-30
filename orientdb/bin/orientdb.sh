@@ -1,7 +1,7 @@
 #!/bin/sh
 # OrientDB service script
 #
-# Copyright (c) OrientDB LTD (http://orientdb.com/)
+# Copyright (c) OrientDB LTD (http://http://orientdb.com/)
 
 # chkconfig: 2345 20 80
 # description: OrientDb init script
@@ -13,7 +13,7 @@ ORIENTDB_USER="USER_YOU_WANT_ORIENTDB_RUN_WITH"
 LOG_DIR="../log"
 
 usage() {
-	echo "Usage: `basename $0`: <start|stop|logs|status>"
+	echo "Usage: `basename $0`: <start|stop|status>"
 	exit 1
 }
 
@@ -41,11 +41,6 @@ stop() {
 	su $ORIENTDB_USER -c "cd \"$ORIENTDB_DIR/bin\"; /usr/bin/nohup ./shutdown.sh 1>>$LOG_DIR/orientdb.log 2>>$LOG_DIR/orientdb.err &"
 }
 
-logs() {
-	echo "Tailing OrientDB server logs, press Ctrl+C to stop."
-	tail -qF -n0 $LOG_DIR/orientdb.err $LOG_DIR/orientdb.log
-}
-
 status() {
 	PID=` ps auxw | grep 'orientdb.www.path' | grep java | grep -v grep | awk '{print $2}'`
 	if [ "x$PID" = "x" ]
@@ -66,12 +61,6 @@ fi
 if [ "x$1" = "xstop" ]
 then
 	stop
-	exit 0
-fi
-
-if [ "x$1" = "xlogs" ]
-then
-	logs
 	exit 0
 fi
 

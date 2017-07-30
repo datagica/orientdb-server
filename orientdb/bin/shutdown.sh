@@ -52,11 +52,10 @@ JAVA_OPTS=-Djava.awt.headless=true
 ORIENTDB_SETTINGS="-XX:MaxDirectMemorySize=512g"
 
 if [ -z "$ORIENTDB_PID" ] ; then
-ORIENTDB_PID=$ORIENTDB_HOME/bin/orient.pid
+    ORIENTDB_PID=$ORIENTDB_HOME/bin/orient.pid
 fi
 
 PARAMS=$*
-
 
 if [ -f "$ORIENTDB_PID" ] && [ "${#PARAMS}" -eq 0 ] ; then
     echo "pid file detected, killing process"
@@ -67,8 +66,9 @@ if [ -f "$ORIENTDB_PID" ] && [ "${#PARAMS}" -eq 0 ] ; then
 else
     echo "pid file not present or params detected"
     "$JAVA" -client $JAVA_OPTS $ORIENTDB_SETTINGS -Dorientdb.config.file="$CONFIG_FILE" \
-        -cp "$ORIENTDB_HOME/lib/orientdb-tools-2.2.17.jar:$ORIENTDB_HOME/lib/*" \
+        -cp "$ORIENTDB_HOME/lib/orientdb-tools-3.0.0m2.jar:$ORIENTDB_HOME/lib/*" \
         com.orientechnologies.orient.server.OServerShutdownMain $*
+
     if [ "x$wait" = "xyes" ] ; then
       echo "wait for OrientDB server to shutdown"
 
@@ -78,5 +78,3 @@ else
       done
     fi
 fi
-
-

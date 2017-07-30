@@ -1,6 +1,6 @@
 @echo off
 rem
-rem Copyright (c) OrientDB LTD (http://www.orientdb.com)
+rem Copyright (c) Orient Technologies LTD (http://www.orientechnologies.com)
 rem
 rem HISTORY:
 rem 2012-07-31: Added -w option
@@ -52,6 +52,6 @@ set JAVA_OPTS=-Djava.awt.headless=true
 rem It's better to set MaxDirectMemorySize, since no one sure OServerShutdownMain will refer inside it
 set ORIENTDB_SETTINGS=-XX:MaxDirectMemorySize=512g
 
-call %JAVA% %JAVA_OPTS% %ORIENTDB_SETTINGS% -Dorientdb.config.file="%CONFIG_FILE%" -cp "%ORIENTDB_HOME%\lib\orientdb-tools-2.2.17.jar;%ORIENTDB_HOME%\lib\*" com.orientechnologies.orient.server.OServerShutdownMain %CMD_LINE_ARGS%
+call %JAVA% -client %JAVA_OPTS% %ORIENTDB_SETTINGS% -Dorientdb.config.file="%CONFIG_FILE%" -cp "%ORIENTDB_HOME%\lib\orientdb-tools-3.0.0m2.jar;%ORIENTDB_HOME%\lib\*" com.orientechnologies.orient.server.OServerShutdownMain %CMD_LINE_ARGS%
 
 :end

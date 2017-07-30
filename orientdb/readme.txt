@@ -32,9 +32,9 @@
    on it.
 2) Type in the terminal the password you want to assign to the “root” user. This
    is needed only the first time.
-3) To Open Studio Web Tool, open a browser and point it to the URL:
+2) To Open Studio Web Tool, open a browser and point it to the URL:
    http://localhost:2480
-4) You can also use the console, it’s in “bin” directory. Launch “console.sh”
+3) You can also use the console, it’s in “bin” directory. Launch “console.sh”
    (or “console.bat” if you’re using Windows)
 
 
@@ -42,12 +42,10 @@
 ---------------
 
 Before to download, compile and install the last version of OrientDB please
-assure to have Java installed. OrientDB needs Oracle Java JDK version 6 or major
+assure to have Java installed. OrientDB needs Oracle Java JDK version 8 or major
 to run the Server. JDK different by Oracle, like OpenJDK, could not work on some
 configuration. We noticed also Oracle JDK is generally faster than OpenJDK.
 
-We suggest to use Java version 8 because it's much faster than Java 6 and 7.
- 
 To download Java go to: http://www.java.com/en/download/
 
 Note: Please assure to download the JDK and not JRE.

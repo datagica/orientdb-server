@@ -1,6 +1,6 @@
 {
   "name": "@datagica/orientdb-server",
-  "version": "2.2.17-1",
+  "version": "3.0.0-m2",
   "description": "OrientDB available as a NPM dependency",
   "main": "./lib/orientdb-server.js",
   "bin": "./bin/orientdb-server",
@@ -17,9 +17,9 @@
   "author": "Julian Bilcke <julian.bilcke@datagica.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "cross-spawn": "5.0.1",
-    "decamelize": "1.2.0",
-    "xml2js": "0.4.17"
+    "cross-spawn": "^5.1.0",
+    "decamelize": "^1.2.0",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {
     "chai": "3.5.0",

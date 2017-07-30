@@ -20,7 +20,7 @@ done
 PRGDIR=`dirname "$PRG"`
 
 # Only set ORIENTDB_HOME if not already set
-[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-2.2.17.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
+[ -f "$ORIENTDB_HOME"/lib/orientdb-tools-3.0.0m2.jar ] || ORIENTDB_HOME=`cd "$PRGDIR/.." ; pwd`
 export ORIENTDB_HOME
 
 
@@ -45,10 +45,10 @@ TRUSTSTORE_PASS=password
 SSL_OPTS="-Dclient.ssl.enabled=false "
 
 exec "$JAVA" -client $JAVA_OPTS $ORIENTDB_OPTS_MEMORY $ORIENTDB_SETTINGS $SSL_OPTS \
-    -Dfile.encoding=utf-8 -Dorientdb.build.number="2.2.x@rd9bace82ea8437117fd48114fc255e791056014b; 2017-02-16 17:20:27+0000" \
-    -cp "$ORIENTDB_HOME/lib/orientdb-tools-2.2.17.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
+    -Dfile.encoding=utf-8 -Dorientdb.build.number="develop@r31b455cec3cc97d11be0748e31ed1a03ff6a23ac; 2017-07-18 09:10:40+0000" \
+    -cp "$ORIENTDB_HOME/lib/orientdb-tools-3.0.0m2.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
     "-Djavax.net.ssl.keyStore=$KEYSTORE" \
     "-Djavax.net.ssl.keyStorePassword=$KEYSTORE_PASS" \
     "-Djavax.net.ssl.trustStore=$TRUSTSTORE" \
     "-Djavax.net.ssl.trustStorePassword=$TRUSTSTORE_PASS" \
-    com.orientechnologies.orient.graph.console.OGremlinConsole $*
+    com.orientechnologies.orient.console.OConsoleDatabaseApp $*
