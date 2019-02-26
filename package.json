@@ -1,6 +1,6 @@
 {
   "name": "@datagica/orientdb-server",
-  "version": "3.0.0-m2",
+  "version": "3.0.0-m3",
   "description": "OrientDB available as a NPM dependency",
   "main": "./lib/orientdb-server.js",
   "bin": "./bin/orientdb-server",

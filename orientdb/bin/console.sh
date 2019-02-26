@@ -44,7 +44,7 @@ TRUSTSTORE="$ORIENTDB_HOME/config/cert/orientdb-console.ts"
 TRUSTSTORE_PASS=password
 SSL_OPTS="-Dclient.ssl.enabled=false "
 
-exec "$JAVA" -client $JAVA_OPTS $ORIENTDB_OPTS_MEMORY $ORIENTDB_SETTINGS $SSL_OPTS \
+exec "$JAVA" -v 9 -client $JAVA_OPTS $ORIENTDB_OPTS_MEMORY $ORIENTDB_SETTINGS $SSL_OPTS \
     -Dfile.encoding=utf-8 -Dorientdb.build.number="develop@r31b455cec3cc97d11be0748e31ed1a03ff6a23ac; 2017-07-18 09:10:40+0000" \
     -cp "$ORIENTDB_HOME/lib/orientdb-tools-3.0.0m2.jar:$ORIENTDB_HOME/lib/*:$ORIENTDB_HOME/plugins/*" \
     "-Djavax.net.ssl.keyStore=$KEYSTORE" \
